@@ -18,7 +18,7 @@ link:https://boardmix.com/app/editor/LjwUujiHa4S5K_b5FsvopA?inviteCode=wurb7t
 doctor  admin  
 the admin heritate from docter and have more functionalities he can control cabinet and all doctors but have no access to all patients only his patients
 
-link :
+link :https://boardmix.com/app/share/CAE.CNCfvwEgASoQh9ZwAD-UnDwcpEoYukyARzAGQAE/QxipY3%EF%BC%8C
 
 --------------------------------------------------------------------------------------------------------------------------
 super admin
