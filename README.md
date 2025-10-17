@@ -37,4 +37,3 @@ assistant
 assistant is the one to manage the patients there creation the waiting room and the rdv
 
 link :https://boardmix.com/app/editor/cglNrMkgVGmJEIvpqgYeHA?inviteCode=wurb7t
-
