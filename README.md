@@ -31,7 +31,8 @@ super admin
 
 the super admin is the one who created the website which means he can control doctors patients and assistants but have no control over patients neither consultations otherwise he have access to everything
 
-link:https://boardmix.com/app/editor/G8G5sH7U6hM8QVuJ4-yfiw?inviteCode=wurb7t
+link:[https://boardmix.com/app/editor/G8G5sH7U6hM8QVuJ4-yfiw?inviteCode=wurb7t](https://boardmix.com/app/share/CAE.CJ-TWCABKhAbwbmwftTqEzxBW4nj7J-LMAZAAQ/wurb7t，
+Cliquez sur le lien pour collaborer dans le fichier [Sans titre] sur Boardmix)
 
 ------------------------------------------------------------------------------------------------------------------------------
 patient
