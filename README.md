@@ -16,8 +16,8 @@ this part contains the road map of docteurs.
 docteur is one of the docteurs  who got the functionality to  add patients edit patients and can have 1 or 4 assistants or 0 docteurs have personal prescriptions and public prescriptions 
 also they can control there assistants and there workplace only
 
-link:[https://boardmix.com/app/editor/LjwUujiHa4S5K_b5FsvopA?inviteCode=wurb7t](https://boardmix.com/app/share/CAE.CJ-TWCABKhAuPBS6OIdrhLkr9vkWy-ikMAZAAQ/wurb7t，
-Cliquez sur le lien pour collaborer dans le fichier [Sans titre] sur Boardmix)
+link:https://boardmix.com/app/share/CAE.CJ-TWCABKhAuPBS6OIdrhLkr9vkWy-ikMAZAAQ/wurb7t，
+Cliquez sur le lien pour collaborer dans le fichier [Sans titre] sur Boardmix
 
 -----------------------------------------------------------------------------------------------------------------------
 doctor  admin  
