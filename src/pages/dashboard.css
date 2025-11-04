@@ -1,0 +1,318 @@
+/* ======================================================
+   Modern Dashboard UI - v2 (Professional Look)
+   Author: Dif Walid
+   ====================================================== */
+
+:root {
+  /* Colors */
+  --bg-dark: #0d1117;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-hover: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --accent: #00c6ff;
+  --accent-strong: #0072ff;
+  --text-main: #f1f5f9;
+  --text-muted: #9ca3af;
+
+  /* Effects */
+  --shadow: rgba(0, 0, 0, 0.5);
+  --radius: 14px;
+  --transition: all 0.3s ease;
+  --blur: 12px;
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.super-dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  min-height: 100vh;
+  padding: 60px 80px;
+  padding-right: 200px;
+  box-sizing: border-box;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  background: var(--bg-dark);
+}
+.super-dashboard::-webkit-scrollbar {
+  width: 8px;
+}
+.super-dashboard::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 8px;
+}
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+
+
+
+@media (max-width: 900px) {
+  .super-dashboard {
+    margin-left: 0;
+    padding: 24px;
+  }
+}
+
+/* HEADER */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px 32px;
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 0 6px 24px var(--shadow);
+  margin-bottom: 32px;
+  transition: var(--transition);
+}
+
+.page-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.2);
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.header-sub {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+}
+
+/* BUTTONS */
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 198, 255, 0.25);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 198, 255, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* CARDS (Dashboard Summary) */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 6px 24px var(--shadow);
+  backdrop-filter: blur(var(--blur));
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(0, 198, 255, 0.3);
+}
+
+.card-title {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-count {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 0.6rem;
+}
+
+.card-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+/* RECENT SECTION */
+.recent {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 0 6px 24px var(--shadow);
+}
+
+.recent-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.recent-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* SUBMENU BUTTONS */
+.submenu {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.submenu button {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-main);
+  font-weight: 600;
+  padding: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.submenu button:hover,
+.submenu button.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 198, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* INPUTS & FORMS */
+input, select, textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 14px 16px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.2);
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  transition: width 0.3s ease;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
