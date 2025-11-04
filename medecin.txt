@@ -1,0 +1,138 @@
+Code complet React + Tailwind
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+// src/App.jsx
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Patients from "./pages/Patients";
+import Ordonnances from "./pages/Ordonnances";
+import Assistant from "./pages/Assistant";
+import About from "./pages/About";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/patients" element={<Patients />} />
+        <Route path="/ordonnances" element={<Ordonnances />} />
+        <Route path="/assistant" element={<Assistant />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+
+-------------------------------------------------------------------------------------------
+Header
+// src/components/Header.jsx
+import { Link } from "react-router-dom";
+
+export default function Header() {
+  return (
+    <header className="bg-gradient-to-r from-cyan-500 to-blue-700 text-white p-4 flex justify-between items-center shadow">
+      <h1 className="text-2xl font-bold">Médecin App</h1>
+      <nav className="space-x-6">
+        <Link to="/dashboard" className="hover:underline">Accueil</Link>
+        <Link to="/patients" className="hover:underline">Patients</Link>
+        <Link to="/ordonnances" className="hover:underline">Ordonnances</Link>
+        <Link to="/assistant" className="hover:underline">Assistant</Link>
+        <Link to="/about" className="hover:underline">À propos</Link>
+      </nav>
+    </header>
+  );
+}
+
+-------------------------------------------------------------------------------------------
+
+Page de connexion
+// src/pages/Login.jsx
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+export default function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (email && password) navigate("/dashboard");
+  };
+
+  return (
+    <div className="flex items-center justify-center h-[80vh]">
+      <form
+        onSubmit={handleLogin}
+        className="bg-white shadow-xl rounded-2xl p-8 w-96"
+      >
+        <h2 className="text-2xl font-semibold mb-6 text-center">Me connecter</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          className="border w-full mb-4 p-2 rounded"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Mot de passe"
+          className="border w-full mb-4 p-2 rounded"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          type="submit"
+          className="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700"
+        >
+          Connexion
+        </button>
+      </form>
+    </div>
+  );
+}
+
+
+----------------------------------------------------------------------------------------
+
+accueil médecin
+// src/pages/Dashboard.jsx
+export default function Dashboard() {
+  return (
+    <div className="p-8 text-center">
+      <h2 className="text-3xl font-bold mb-4">Bienvenue, Docteur</h2>
+      <p className="text-gray-600">Accédez à vos patients, ordonnances et assistants.</p>
+    </div>
+  );
+}
+
+------------------------------------------------------------------------------------------
+Ordonnances
+// src/pages/Ordonnances.jsx
+export default function Ordonnances() {
+  return (
+    <div className="p-8">
+      <h2 className="text-2xl font-bold mb-4">Gestion des ordonnances</h2>
+      <p>Créer, lire, mettre à jour ou supprimer une ordonnance.</p>
+    </div>
+  );
+}
+
+----------------------------------------------------------------------------------------
+
